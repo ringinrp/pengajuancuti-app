@@ -18,11 +18,9 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users');
             $table->string('user_approve')->nullable();
             $table->boolean('status_approve')->nullable();
-            $table->boolean('status_approve')->nullable();
-            $table->text('keterangan')->nullable();
             $table->text('keterangan')->nullable();
             $table->foreignId('next_approve_id')->nullable()->constrained('users');
-            $table->string('next_approve_id')->nullable();
+            $table->string('next_approve')->nullable();
             $table->dateTime('tanggal');
             $table->timestamps();
         });
